@@ -22,6 +22,7 @@ docker镜像地址与教程：https://hub.docker.com/r/dqjdda/openai-java
 # 替换 KEYS 即可
 # 参数教程见：https://hub.docker.com/r/dqjdda/openai-java
 # Arm 机器实用 dqjdda/openai-java:arm64 镜像
+# TIPS 是网站首页的提示信息，支持html语法
 docker run -d \
 --name openai --restart always \
 -p 18080:18080 \
@@ -29,6 +30,7 @@ docker run -d \
 -e TEMPERATURE=0.6 \
 -e KEYS=sk-xxxx,sk-xxxx \
 -e BD_TONG_JI_TOKEN= \
+-e TIPS="ChatGPT 是一个超强的人工智能语言模型，它会创作、写论文、答辩、编程，绘画等" \
 dqjdda/openai-java
 ```
 
