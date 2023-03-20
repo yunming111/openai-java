@@ -83,11 +83,9 @@
     if(bdTongJiToken){
       var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="https://hm.baidu.com/hm.js?" + bdTongJiToken;var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s)})();
     }
-    // 长度限制
-    const maxTokens = [[${@environment.getProperty('openai.max_tokens')}]];
     // 设置提示信息
-    $("#promptText").html("ChatGPT是一个超强的Ai，它会创作、写论文、答辩、编程，绘画等<br/>\n" +
-            "由于接口是付费的，未填写APIKEY上下文Token的长度将限制为" + maxTokens + "，服务端不存储任何数据");
+    $("#promptText").html("演示站额度已用完，请使用自己的KEY，本站不存储任何用户数据<br/>ChatGPT 是一个超强的人工智能语言模型，它会创作、写论文、答辩、编程，绘画等<br/>\n" +
+            "<b>主机推广：部署自己的AI程序，境外稳定建站科学上网主机推荐购买 <a style='color: #096dd9;text-decoration: none;' href='https://bwh81.net/aff.php?aff=70876&pid=87' target='_blank'>点我直达</a>，主机更多介绍 <a style='color: #096dd9;text-decoration: none;' href='https://eladmin.vip/pages/050101/' target='_blank'>点我直达</a></b>");
   </script>
 </body>
 </html>
