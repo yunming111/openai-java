@@ -65,11 +65,6 @@ public class OpenAiConfig {
     private String imageApi;
 
     /**
-     * OpenAi的creditApi
-     */
-    private String creditApi;
-
-    /**
      * 站点提示信息
      */
     private String tips;

@@ -14,9 +14,7 @@
  *  limitations under the License.
  */
 package com.ydyno.service;
-
 import com.ydyno.service.dto.OpenAiRequest;
-import com.ydyno.service.dto.OpenAiResult;
 
 /**
  * @author Zheng Jie
@@ -24,13 +22,6 @@ import com.ydyno.service.dto.OpenAiResult;
  * @date 2023-02-15
  **/
 public interface OpenAiService {
-
-    /**
-     * 查询余额
-     * @param openAiDto /
-     * @return /
-     */
-    OpenAiResult creditQuery(OpenAiRequest openAiDto);
 
     /**
      * 问答，绘画

@@ -95,31 +95,16 @@ apikeyInput.keydown(function (e) {
 // 查询余额方法
 function keyclick() {
     apikey = apikeyInput.val();
-    const currentBalance = $("#currentBalance");
+    const keyVal = localStorage.getItem("apikey");
     // 将输入的apikey存入localStorage
     localStorage.setItem("apikey", apikey);
     if (!apikey) {
-        currentBalance.html("");
+        if(keyVal){
+            toast({ time: 1000, msg: "APIKEY清除成功！" });
+        }
         return;
     }
-    $.ajax({
-        url: apiUrl,
-        type: "post",
-        data: JSON.stringify({ id: 3, apikey: apikey }),
-        contentType: "application/json",
-        dataType: "json",
-        success: function (res) {
-            if (res.code > 200){
-                toast({ time: 3000, msg: res.html });
-            } else {
-                toast({ time: 2000, msg: "当前 APIKey 余额已刷新" });
-                currentBalance.html(
-                    "&nbsp;&nbsp当前余额：$" + parseFloat(res.html).toFixed(2)
-                );
-            }
-            kwTarget.val("");
-        }
-    });
+    toast({ time: 1000, msg: "APIKEY设置成功！" });
 }
 
 // 点击事件
